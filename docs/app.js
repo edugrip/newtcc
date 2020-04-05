@@ -6,7 +6,7 @@
 var GETH_HOSTNAME = "localhost";	// put your IP address!
 var APP_HOSTNAME = "See package.json --> scripts --> start: Change 'localhost'!!!";
 
-var GETH_RPCPORT = 8545; 		// for geth --rpcport GETH_RPCPORT
+var GETH_RPCPORT = 8546; 		// for geth --rpcport GETH_RPCPORT
 var APP_PORT = "See package.json --> scripts --> start: Perhaps change '8000'";
 
 // this is creating the corrected geth command
@@ -113,7 +113,7 @@ angular.module('ethExplorer', ['ngRoute', 'ui.bootstrap', 'filters', 'ngSanitize
                 // maybe we can create a service to do the reg ex test, so we can use it in every controller ?
                 var regexpTx = /[0-9a-zA-Z]{64}?/;
                 //var regexpAddr =  /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/; // TODO ADDR REGEX or use isAddress(hexString) API ?
-                var regexpAddr = /^(0x)?[0-9a-f]{40}$/; //New ETH Regular Expression for Addresses
+                var regexpAddr = /^(0x)?[0-9a-f]{40}$/; //New Jiviz Regular Expression for Addresses
                 var regexpBlock = /[0-9]{1,7}?/;
 
                 var result = regexpTx.test(requestStr);

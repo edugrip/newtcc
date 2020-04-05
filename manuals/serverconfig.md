@@ -8,7 +8,7 @@ Thanks to joey, for helping to find out the [correct geth command](https://githu
 
 It is useful to make a shortcut for starting the server with that geth command, e.g.:
 
-    echo 'geth --rpc --rpcaddr your.ip.address.here --rpcport 8545 --rpcapi "web3,eth" --rpccorsdomain "http://your.ip.address.here:8000"' > ~/go/bin/EthExp_geth
+    echo 'geth --rpc --rpcaddr your.ip.address.here --rpcport 8546 --rpcapi "web3,eth" --rpccorsdomain "http://your.ip.address.here:8000"' > ~/go/bin/EthExp_geth
     chmod u+x ~/go/bin/EthExp_geth
     screen -S geth EthExp_geth
     

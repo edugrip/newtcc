@@ -73,7 +73,7 @@ angular.module('ethExplorer')
 
             $.getJSON("https://api.coinmarketcap.com/v1/ticker/ethereum/", function (json) {
                 var cap = Number(json[0].market_cap_usd);
-                //console.log("Current ETH Market Cap: " + cap);
+                //console.log("Current Jiviz Market Cap: " + cap);
                 $scope.ethmarketcap = cap;
             });
         }

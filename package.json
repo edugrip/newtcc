@@ -2,7 +2,7 @@
   "name": "eth-block-explorer",
   "description": "A lightweight ethereum block explorer",
   "version": "0.0.1",
-  "repository": "https://github.com/sthnaqvi/explorer",
+  "repository": "https://github.com/jiviz-world/go-jiviz",
   "license": "MIT",
   "private": false,
   "devDependencies": {
@@ -18,8 +18,8 @@
     "shelljs": "^0.2.6"
   },
   "scripts": {
-    "postinstall": "bower install",
-    "prestart": "npm install",
+    "postinstall": "",
+    "prestart": "",
     "start": "http-webnode ./app -a localhost -p 8000 -c-1",
     "pretest": "npm install",
     "test": "karma start karma.conf.js",

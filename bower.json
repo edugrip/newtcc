@@ -2,7 +2,7 @@
   "name": "eth-block-explorer",
   "description": "A lightweight ethereum block explorer",
   "version": "0.0.1",
-  "homepage": "https://github.com/sthnaqvi/explorer",
+  "homepage": "https://github.com/jiviz-world/go-jiviz",
   "license": "MIT",
   "private": false,
   "dependencies": {

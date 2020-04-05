@@ -73,7 +73,7 @@ angular.module('ethExplorer')
 
             $.getJSON("https://api.coinmarketcap.com/v1/ticker/ethereum/", function (json) {
                 var cap = Number(json[0].market_cap_usd);
-                //console.log("Current ETH Market Cap: " + cap);
+                //console.log("Current Jiviz Market Cap: " + cap);
                 $scope.ethmarketcap = cap;
             });
         }
@@ -232,7 +232,7 @@ angular.module('filters', [])
             if (isNaN(txt)) return txt;
             var b = new BigNumber(txt);
             var w = web3.fromWei(b, "ether");
-            return w.toFixed(6) + " ETH";
+            return w.toFixed(6) + "JVZ";
         };
     })
     .filter('timestampAge', function () {
