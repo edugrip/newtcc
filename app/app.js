@@ -4,7 +4,7 @@
 // But how to include a file from local?
 
 //var GETH_HOSTNAME = "localhost";	// put your IP address!
-var GETH_HOSTNAME = "rpc.jivizchain.com";	// put your IP address!
+var GETH_HOSTNAME = "142.93.212.167";	// put your IP address!
 
 var APP_HOSTNAME = "See package.json --> scripts --> start: Change 'localhost'!!!";
 
@@ -85,8 +85,7 @@ angular.module('ethExplorer', ['ngRoute', 'ui.bootstrap', 'filters', 'ngSanitize
         var web3 = new Web3();
 
         // begin AltSheets changes
-//        web3.setProvider(new web3.providers.HttpProvider("http://" + GETH_HOSTNAME + ":" + GETH_RPCPORT));
-        web3.setProvider(new web3.providers.HttpProvider("http://" + GETH_HOSTNAME));
+        web3.setProvider(new web3.providers.HttpProvider("http://" + GETH_HOSTNAME + ":" + GETH_RPCPORT));
 
         // end AltSheets changes
 
