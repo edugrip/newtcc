@@ -2,7 +2,7 @@
   "name": "eth-block-explorer",
   "description": "A lightweight ethereum block explorer",
   "version": "0.0.1",
-  "repository": "https://github.com/jiviz-world/go-jiviz",
+  "repository": "https://github.com/TCC-world/go-TCC",
   "license": "MIT",
   "private": false,
   "devDependencies": {

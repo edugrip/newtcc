@@ -113,7 +113,7 @@ angular.module('ethExplorer', ['ngRoute', 'ui.bootstrap', 'filters', 'ngSanitize
                 // maybe we can create a service to do the reg ex test, so we can use it in every controller ?
                 var regexpTx = /[0-9a-zA-Z]{64}?/;
                 //var regexpAddr =  /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/; // TODO ADDR REGEX or use isAddress(hexString) API ?
-                var regexpAddr = /^(0x)?[0-9a-f]{40}$/; //New Jiviz Regular Expression for Addresses
+                var regexpAddr = /^(0x)?[0-9a-f]{40}$/; //New TCC Regular Expression for Addresses
                 var regexpBlock = /[0-9]{1,7}?/;
 
                 var result = regexpTx.test(requestStr);

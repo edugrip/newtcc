@@ -4,7 +4,7 @@
 // But how to include a file from local?
 
 //var GETH_HOSTNAME = "localhost";	// put your IP address!
-var GETH_HOSTNAME = "rpc.jivizchain.com";	// put your IP address!
+var GETH_HOSTNAME = "rpc.tccblocks.info";	// put your IP address!
 
 var APP_HOSTNAME = "See package.json --> scripts --> start: Change 'localhost'!!!";
 
@@ -13,7 +13,7 @@ var APP_PORT = "See package.json --> scripts --> start: Perhaps change '8000'";
 
 // this is creating the corrected geth command
 var WL = window.location;
-var geth_command = "jiviz --rpc --rpcaddr " + GETH_HOSTNAME + " --rpcport " + GETH_RPCPORT + '\
+var geth_command = "TCC --rpc --rpcaddr " + GETH_HOSTNAME + " --rpcport " + GETH_RPCPORT + '\
  --rpcapi "web3,eth" ' + ' --rpccorsdomain "' + WL.protocol + "//" + WL.host + '"';
 
 ////////////////////////////////////////////////////
@@ -39,6 +39,10 @@ angular.module('ethExplorer', ['ngRoute', 'ui.bootstrap', 'filters', 'ngSanitize
                 templateUrl: 'views/addressInfos.html',
                 controller: 'addressInfosCtrl'
             }).// info page with links:
+            when('/contract/:contractAddress',{
+                templateUrl:'views/contractInfos.html',
+                controller:'contractInfosCtrl'
+            }).
             when('/chain/api', {
                 templateUrl: 'views/api/api.html',
                 controller: 'chainInfosCtrl'
@@ -126,7 +130,8 @@ angular.module('ethExplorer', ['ngRoute', 'ui.bootstrap', 'filters', 'ngSanitize
                 else {
                     result = regexpAddr.test(requestStr.toLowerCase());
                     if (result === true) {
-                        goToAddrInfos(requestStr.toLowerCase())
+                     //   goToAddrInfos(requestStr.toLowerCase())
+                        goToContractInfos(requestStr.toLowerCase())
                     }
                     else {
                         result = regexpBlock.test(requestStr);
@@ -155,6 +160,9 @@ angular.module('ethExplorer', ['ngRoute', 'ui.bootstrap', 'filters', 'ngSanitize
 
         function goToTxInfos(requestStr) {
             $location.path('/tx/' + requestStr);
+        }
+        function goToContractInfos(requestStr) {
+            $location.path('/contract/' + requestStr);
         }
     })
     .directive('nTooltips', function () {
