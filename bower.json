@@ -3,6 +3,7 @@
   "description": "A lightweight ethereum block explorer",
   "version": "0.0.1",
   "homepage": "https://github.com/TCC-world/go-tcc",
+
   "license": "MIT",
   "private": false,
   "dependencies": {

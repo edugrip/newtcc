@@ -3,6 +3,7 @@
   "description": "A lightweight tcc block explorer",
   "version": "0.0.1",
   "repository": "https://github.com/tcc-world/go-tcc",
+
   "license": "MIT",
   "private": false,
   "devDependencies": {

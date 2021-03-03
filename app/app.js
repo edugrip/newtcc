@@ -39,10 +39,12 @@ angular.module('ethExplorer', ['ngRoute', 'ui.bootstrap', 'filters', 'ngSanitize
                 templateUrl: 'views/addressInfos.html',
                 controller: 'addressInfosCtrl'
             }).// info page with links:
-            // when('/contract/:contractAddress', {
-            //     templateUrl: 'views/contractInfos.html',
-            //     controller: 'contractInfosCtrl'
-            // }).
+
+            when('/contract/:contractAddress',{
+                templateUrl:'views/contractInfos.html',
+                controller:'contractInfosCtrl'
+            }).
+// detached
             when('/chain/api', {
                 templateUrl: 'views/api/api.html',
                 controller: 'chainInfosCtrl'
@@ -131,14 +133,17 @@ angular.module('ethExplorer', ['ngRoute', 'ui.bootstrap', 'filters', 'ngSanitize
                 else {
                     result = regexpAddr.test(requestStr.toLowerCase());
                     if (result === true) {
+
                         // var code = web3.eth.getCode("0xa5Acc472597C1e1651270da9081Cc5a0b38258E3")
                         // if(code!=="0x"){
                         //     goToContractInfos(requestStr.toLowerCase())
                         // }
                         // else {
                             goToAddrInfos(requestStr.toLowerCase())
+                         //   goToContractInfos(requestStr.toLowerCase())
 
                         // }
+
                     }
                     else {
                         result = regexpBlock.test(requestStr);

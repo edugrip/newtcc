@@ -22,7 +22,11 @@ a TCC Wallet: 0x1BDA9C6A37ECd91940df1E7559A8403ecE9806D1
 ## Installation
 
 ```
+<<<<<<< HEAD
 git clone https://github.com/tcc-world/go-tcc
+=======
+git clone https://github.com/TCC-world/go-TCC
+>>>>>>> detached
 npm install
 bower install
 npm start
@@ -52,4 +56,8 @@ Then visit http://localhost:8000 in your browser of choice after you npm start t
 - Realtime latest blocks and recent transactions
 - Other random blockchain info stats were added
 
+<<<<<<< HEAD
 _If you want to disable auto refresh/auto new block show, just comment line no 13-22 at: [app/scripts/controllers/mainController.js](https://github.com/tcc-world/go-tcc/blob/3a08032fc8550a863ae49acf0bdd45bfe2d961d1/app/scripts/controllers/mainController.js#L13-L22)_
+=======
+_If you want to disable auto refresh/auto new block show, just comment line no 13-22 at: [app/scripts/controllers/mainController.js](https://github.com/TCC-world/go-TCC/blob/3a08032fc8550a863ae49acf0bdd45bfe2d961d1/app/scripts/controllers/mainController.js#L13-L22)_
+>>>>>>> detached
